@@ -4,3 +4,8 @@ h1 {
     color: rgb(239, 161, 239);
     font-size: 70px;
 }
+
+h3 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
