@@ -6,7 +6,12 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     margin-left: 130px;
     margin-right: 130px;
 }
 
+p {
+    margin-left: 80px;
+    margin-right: 80px;
+}
