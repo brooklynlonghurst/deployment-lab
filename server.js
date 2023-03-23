@@ -17,6 +17,33 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
 
+let emptyArr = []
+
+app.post('/api/signup', (req, res) => {
+    let {input} = req.body
+
+    const index = emptyArr.findIndex(signup => {
+        return signup === input
+    })
+
+    try {
+        if (index === -1 && input !== ''){
+            emptyArr.push(input)
+            res.status(200).send(emptyArr)
+        }
+    } catch (err) {
+        console.log(err)
+    }
+})
+
+
+
+
+
+
+
+
+
 app.listen(4000, () => {
     console.log('app is up on 4000')
 })
