@@ -27,11 +27,6 @@ app.post('/api/signup', signup)
 
 
 
-
-
-
-
-
 app.listen(4000, () => {
     console.log('app is up on 4000')
 })
