@@ -17,24 +17,12 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
 
-let emptyArr = []
+const { signup } = require('./controller')
 
-app.post('/api/signup', (req, res) => {
-    let {input} = req.body
+rollbar.info(`New signup!`)
+app.post('/api/signup', signup)
 
-    const index = emptyArr.findIndex(signup => {
-        return signup === input
-    })
 
-    try {
-        if (index === -1 && input !== ''){
-            emptyArr.push(input)
-            res.status(200).send(emptyArr)
-        }
-    } catch (err) {
-        console.log(err)
-    }
-})
 
 
 
